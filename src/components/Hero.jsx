@@ -2,10 +2,12 @@ import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
 import profile from '../assets/profile_pic.jpg';
+import { AnimatedGridPattern } from "../components/magicui/animated-grid-pattern";
 
 const Hero = () => {
     return (
-        <section className="flex h-screen justify-center items-center">
+        <section className="flex h-screen justify-evenly items-center">
+            
             <div className="w-1/2 inter">
                 <h1 className="text-6xl">Hi, I'm Carl</h1>
                 <h2 className="text-2xl my-2">Full Stack Web Developer</h2>

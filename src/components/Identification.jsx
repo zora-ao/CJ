@@ -1,4 +1,5 @@
 import profile from '../assets/profile_pic.jpg';
+import { BoxReveal } from "../components/magicui/box-reveal";
 
 const Identification = () => {
     return (
@@ -10,25 +11,15 @@ const Identification = () => {
                     src={profile} 
                     alt="Profile picture" />
 
-                    <div className=' h-[50px] overflow-hidden group'>
-                        <h2>Name:</h2>
-                        <div className='flex gap-x-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-200 ease-in-out'>
-                            <h2>
-                                Carl Jasper Ramos
-                            </h2>
-                        </div>
+                    <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                        <span>Name:</span>
+                        <h1>Carl Jasper Ramos</h1>
+                    </BoxReveal>
 
-                        <hr className='border' />
-                    </div>
-
-                    <div className=' h-[50px] overflow-hidden group'>
-                        <h2>Age:</h2>
-                        <div className='flex gap-x-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-200 ease-in-out'>
-                            <h2>18 years old</h2>
-                        </div>
-
-                        <hr className='border' />
-                    </div>
+                    <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                        <span>Age:</span>
+                        <h1>18 Years Old</h1>
+                    </BoxReveal>
                     
                 </div>
             </div>
