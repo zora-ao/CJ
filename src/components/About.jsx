@@ -1,8 +1,8 @@
-import Identification from './Identification'
+import TimeLine from "./TimeLine"
 
 const About = () => {
     return (
-        <div className='h-screen inter flex flex-col justify-center items-center'>
+        <div className='h-screen inter '>
             <h2 className='text-center text-2xl my-4'>About Me</h2>
             <div className='flex justify-evenly'>
                 <div className='flex flex-col gap-4 w-1/2'>
@@ -20,6 +20,7 @@ const About = () => {
 
                 
             </div>
+            <TimeLine />
         </div>
     )
 }

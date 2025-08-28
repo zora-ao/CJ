@@ -4,14 +4,22 @@ import { CgMail } from "react-icons/cg";
 import profile from '../assets/profile_pic.jpg';
 import { AnimatedGridPattern } from "../components/magicui/animated-grid-pattern";
 import Identification from "./Identification";
+import { TypingAnimation } from "../components/magicui/typing-animation";
+import { useTheme } from "../contexts/themeContext";
+import Button from "./Button";
 
 const Hero = () => {
+
+    const {themeMode} = useTheme();
+
     return (
-        <section className="flex h-screen justify-evenly items-center bg-gray-100">
+        <section className="flex h-screen justify-evenly items-center">
             
             <div className="w-1/2 inter">
                 <h1 className="text-6xl">Hi, I'm Carl</h1>
-                <h2 className="text-2xl my-6">Full Stack Web Developer</h2>
+                <TypingAnimation>
+                    Website Developer
+                </TypingAnimation>
 
                 <p>
                     I create beautiful, responsive web applications using modern technologies. 
@@ -19,8 +27,8 @@ const Hero = () => {
                 </p>
 
                 <div className="flex items-center gap-x-2 my-8">
-                    <button className="bg-black text-white px-4 py-3 rounded">View My Work</button>
-                    <button className="border border-black px-4 py-3 rounded">Get In Touch</button>
+                    <Button value={"View My Work"} bgColor={"bg-black"} textColor={"text-white"} />
+                    <Button value={"View My Work"} bgColor={"bg-white"} textColor={"text-black"} />
                 </div>
 
                 <ul className="flex items-center gap-x-8 text-xl">

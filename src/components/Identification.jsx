@@ -1,6 +1,14 @@
+import { details } from 'motion/react-client';
 import profile from '../assets/profile_pic.jpg';
 
 const Identification = () => {
+
+    const boxInfo = [
+        {title: "Age", details: "18 Years Old"},
+        {title: "Course", details: "Computer Science"},
+        {title: "Year", details: "First Year"}
+    ]
+
     return (
         <div className='flex flex-col items-center justify-between'>
             <img 
@@ -9,20 +17,12 @@ const Identification = () => {
             alt="Profile picture" />
 
             <div className='flex gap-x-4 inter'>
-                <div className='bg-white px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
-                    <h1>Age:</h1>
-                    <p className='font-semibold text-sm'>18 Years Old</p>
-                </div>
-
-                <div className='bg-white px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
-                    <h1 >Course:</h1>
-                    <p className='font-semibold text-sm'>Computer Science</p>
-                </div>
-
-                <div className='bg-white px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
-                    <h1 >Year:</h1>
-                    <p className='font-semibold text-sm'>First Year</p>
-                </div>
+                {boxInfo.map((info) => (
+                    <div className=' px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
+                        <h1 className='text-sm my-2'>{info.title}:</h1>
+                        <p className='font-semibold text-sm'>{info.details}</p>
+                    </div>
+                ))}
             </div>
         
         </div>

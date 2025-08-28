@@ -1,4 +1,7 @@
 import React from 'react'
+import { IoMdSunny } from "react-icons/io";
+import { useTheme } from '../contexts/themeContext';
+import { LuSunMoon } from "react-icons/lu";
 
 const Header = () => {
 
@@ -21,15 +24,35 @@ const Header = () => {
         }
     ];
 
+    const {themeMode, lightMode, darkMode} = useTheme();
+
+
     return (
         <section className='backdrop-blur-2xl py-3 px-14 fixed top-0 w-full shadow-sm'>
             <div className='flex justify-between items-center inter'>
                 <h1 className='itim text-xl font-semibold'>Carl Jasper Ramos</h1>
 
-                <ul className='flex gap-x-4 '>
+                <ul className='flex gap-x-4 items-center'>
                     {navigations.map((nav, index) => (
-                        <li key={index}>{nav.title}</li>
+                        <li 
+                        className='cursor-pointer'
+                        key={index}>{nav.title}</li>
                     ))}
+
+                    {
+                        themeMode === 'light' ? (
+                            <LuSunMoon
+                            onClick={darkMode} 
+                            className='text-xl mx-4 cursor-pointer'
+                            />
+                        ) : (
+                            <IoMdSunny
+                            onClick={lightMode}
+                            className='text-xl mx-4 cursor-pointer'
+                            />
+                        )
+                    }
+
                 </ul>
             </div>
         </section>
