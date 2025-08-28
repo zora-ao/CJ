@@ -18,7 +18,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <Identification />
+                
             </div>
         </div>
     )
