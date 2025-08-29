@@ -3,6 +3,7 @@ import { IoMdSunny } from "react-icons/io";
 import { useTheme } from '../contexts/themeContext';
 import { LuSunMoon } from "react-icons/lu";
 import { TiThMenuOutline } from "react-icons/ti";
+import { IoClose } from "react-icons/io5";
 
 const Header = () => {
 
@@ -28,10 +29,6 @@ const Header = () => {
     ];
 
     const {themeMode, lightMode, darkMode} = useTheme();
-
-    const handleNavBar = () => {
-        setShowNav(prev => !prev);
-    }
 
     return (
         <section className='backdrop-blur-2xl py-3 md:px-14 px-8 fixed top-0 w-full shadow-sm z-50'>
@@ -62,10 +59,18 @@ const Header = () => {
                         )
                     }
 
-                    <TiThMenuOutline
-                    className='md:hidden flex'
-                    onClick={handleNavBar}
-                    />
+                    {showNav ? (
+                        <IoClose
+                        className='md:hidden flex'
+                        onClick={() => setShowNav(prev => !prev)}
+                        />
+                    ) : (
+                        <TiThMenuOutline
+                        className='md:hidden flex'
+                        onClick={() => setShowNav(prev => !prev)}
+                        />
+                    )}
+
                 </div>
             </div>
 
