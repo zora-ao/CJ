@@ -34,13 +34,13 @@ const Skills = () => {
     ]
 
     return (
-        <div className='h-screen pt-20 inter'>
+        <div className='md:h-screen pt-20 inter flex flex-col '>
             <div className="text-center mb-10">
                 <h1 className='text-3xl  font-semibold inter'>Technologies that I used</h1>
                 <p>Learning and emproving skills everyday. </p>
             </div>
 
-            <div className="grid grid-cols-5 gap-x-10 gap-y-12 border-black w-1/2 mx-auto">
+            <div className="grid md:grid-cols-5 grid-cols-3 gap-x-4 md:gap-x-10 gap-y-12 border-black md:w-1/2 mx-auto">
                 {techTools.map((tool, index) => (
                     <div key={index}>
                         <Tooltip key={index}>

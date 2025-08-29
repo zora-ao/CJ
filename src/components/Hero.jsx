@@ -13,9 +13,9 @@ const Hero = () => {
     const {themeMode} = useTheme();
 
     return (
-        <section className="flex h-screen justify-evenly items-center">
+        <section className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center px-6 mt-20 md:mt-0">
             
-            <div className="w-1/2 inter">
+            <div className="md:w-1/2 inter">
                 <h1 className="text-6xl">Hi, I'm Carl</h1>
                 <TypingAnimation>
                     Website Developer

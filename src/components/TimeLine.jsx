@@ -7,7 +7,7 @@ const TimeLine = () => {
             time: "2022",
             steps: [
             { icon: <span>💻</span>, content: "Started learning HTML & CSS" },
-            { icon: <span>✍️</span>, content: "Learned with the help of the freeCodeCamp website." },
+            { icon: <span>✍️</span>, content: "Learned with the help of the freeCodeCamp website and youtube." },
             ],
         },
         {
