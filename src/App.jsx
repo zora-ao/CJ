@@ -7,7 +7,7 @@ import { ThemeProvider } from './contexts/themeContext.js'
 import { useEffect, useState } from "react"
 
 const App = () => {
-  const [themeMode, setThemeMode] = useState('light');
+  const [themeMode, setThemeMode] = useState('dark');
 
   const lightMode = () => {
     setThemeMode("light")

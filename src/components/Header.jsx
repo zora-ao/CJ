@@ -28,7 +28,7 @@ const Header = () => {
 
 
     return (
-        <section className='backdrop-blur-2xl py-3 px-14 fixed top-0 w-full shadow-sm'>
+        <section className='backdrop-blur-2xl py-3 px-14 fixed top-0 w-full shadow-sm z-50'>
             <div className='flex justify-between items-center inter'>
                 <h1 className='itim text-xl font-semibold'>Carl Jasper Ramos</h1>
 

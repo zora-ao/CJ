@@ -17,8 +17,8 @@ const Identification = () => {
             alt="Profile picture" />
 
             <div className='flex gap-x-4 inter'>
-                {boxInfo.map((info) => (
-                    <div className=' px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
+                {boxInfo.map((info, index) => (
+                    <div key={index} className=' px-4 py-3 border text-center rounded shadow-lg w-[150px]'>
                         <h1 className='text-sm my-2'>{info.title}:</h1>
                         <p className='font-semibold text-sm'>{info.details}</p>
                     </div>
