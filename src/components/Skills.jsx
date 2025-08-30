@@ -42,14 +42,14 @@ const Skills = () => {
 
             <div className="grid md:grid-cols-5 grid-cols-3 gap-x-4 md:gap-x-10 gap-y-12 border-black md:w-1/2 mx-auto">
                 {techTools.map((tool, index) => (
-                    <div key={index}>
+                    <div key={index} className="group">
                         <Tooltip key={index}>
                             <TooltipTrigger>
                                 <div 
-                                style={{ boxShadow: `0px 10px 20px ${tool.color}` }}
-                                className={`bg-gray-200 shadow-2xl rounded mx-auto w-[100px] h-[100px] border border-black px-4 py-4`}>
+                                style={{ boxShadow: `0px 0px 15px ${tool.color}` }}
+                                className={`bg-gray-100 shadow-2xl rounded mx-auto w-[80px] h-[80px] border border-black px-6 py-6`}>
                                     <img 
-                                    className=""
+                                    className="group-hover:scale-125 duration-200 transition-all ease-in-out"
                                     src={tool.img} 
                                     alt={tool.name} />
                                 </div>

@@ -1,6 +1,7 @@
 import { details } from 'motion/react-client';
 import profile from '../assets/profile_pic.jpg';
 import { useTheme } from '../contexts/themeContext';
+import { Highlighter } from "../components/magicui/highlighter";
 
 const Identification = () => {
 
@@ -21,9 +22,13 @@ const Identification = () => {
 
             <div className='flex md:gap-x-4 gap-x-2 inter'>
                 {boxInfo.map((info, index) => (
-                    <div key={index} className={`md:px-4 px-2 py-3 border ${useTheme === "light" ? "border-black" : "border-white"} text-center rounded shadow-lg md:w-[150px]`}>
+                    <div key={index} className={`md:px-4 px-2 py-3 text-center rounded shadow-lg md:w-[150px]`}>
                         <h1 className='text-sm my-2'>{info.title}:</h1>
-                        <p className='font-semibold text-sm'>{info.details}</p>
+                        <p className='font-semibold text-sm'>
+                            <Highlighter action="underline" color="#FF9800">
+                                {" "}{info.details}{" "}
+                            </Highlighter>
+                        </p>
                     </div>
                 ))}
             </div>

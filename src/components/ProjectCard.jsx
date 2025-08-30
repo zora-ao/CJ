@@ -1,18 +1,22 @@
 import { FiGithub } from "react-icons/fi"
 import { FaExternalLinkAlt } from "react-icons/fa"
 import ImageSlider from "./ImageSlider"
+import { useTheme } from "../contexts/themeContext"
 
 
 const ProjectCard = ({projects}) => {
+
+    const {themeMode} = useTheme;
+
     return (
-        <div className="flex flex-wrap gap-x-4 gap-y-10 justify-evenly mt-8">
+        <div className="flex flex-wrap gap-x-4 gap-y-10 justify-center mt-8">
                 {projects.map((project, index) => (
-                    <div key={index} className="flex flex-col  w-[550px] border border-white rounded text-white pb-4">
+                    <div key={index} className={`flex flex-col  w-[550px] border rounded pb-4`}>
                         
                         <ImageSlider images={project.slides} />
 
-                        <div className="px-4 my-8">
-                            <h1 className="my-4 text-lg font-semibold">{project.title}</h1>
+                        <div className="px-4 my-4">
+                            <h1 className="mb-4 text-lg font-semibold">{project.title}</h1>
                             <p>
                                 {project.details}
                             </p>

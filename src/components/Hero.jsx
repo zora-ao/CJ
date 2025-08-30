@@ -7,6 +7,7 @@ import Identification from "./Identification";
 import { TypingAnimation } from "../components/magicui/typing-animation";
 import { useTheme } from "../contexts/themeContext";
 import Button from "./Button";
+import { Highlighter } from "../components/magicui/highlighter";
 
 const Hero = () => {
 
@@ -17,9 +18,11 @@ const Hero = () => {
             
             <div className="md:w-1/2 inter">
                 <h1 className="text-6xl">Hi, I'm Carl</h1>
-                <TypingAnimation>
-                    Website Developer
-                </TypingAnimation>
+                <div className="my-4">
+                    <Highlighter action="underline" color="yellow">
+                        <h2 className="text-3xl font-semibold">Website Developer</h2>
+                    </Highlighter>
+                </div>
 
                 <p>
                     I create beautiful, responsive web applications using modern technologies. 
