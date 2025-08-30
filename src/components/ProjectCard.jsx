@@ -7,7 +7,7 @@ const ProjectCard = ({projects}) => {
     return (
         <div className="flex flex-wrap gap-x-4 gap-y-10 justify-evenly mt-8">
                 {projects.map((project, index) => (
-                    <div key={index} className="flex flex-col  w-[450px] border border-white rounded text-white pb-4">
+                    <div key={index} className="flex flex-col  w-[550px] border border-white rounded text-white pb-4">
                         
                         <ImageSlider images={project.slides} />
 

@@ -14,30 +14,27 @@ const ImageSlider = ({ images }) => {
     }
 
     return (
-        <div className="relative w-full h-[200px] overflow-hidden">
+        <div className="relative w-full h-[250px] overflow-hidden">
         <AnimatePresence>
             <motion.img
             key={index}
             src={images[index]}
             alt="slide"
             className="w-full h-full object-cover"
-            initial={{ x: 100 }}
-            animate={{ x: 0 }}
+            
             />
         </AnimatePresence>
 
-        {/* Left button */}
         <button
             onClick={prevSlide}
-            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+            className="absolute top-1/2 left-3 cursor-pointer -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
         >
             <FaChevronLeft />
         </button>
 
-        {/* Right button */}
         <button
             onClick={nextSlide}
-            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+            className="absolute cursor-pointer top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
         >
             <FaChevronRight />
         </button>

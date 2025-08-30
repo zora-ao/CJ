@@ -8,6 +8,7 @@ import { ThemeProvider } from './contexts/themeContext.js'
 import { useEffect, useState } from "react"
 
 const App = () => {
+
   const [themeMode, setThemeMode] = useState('dark');
 
   const lightMode = () => {
@@ -24,7 +25,7 @@ const App = () => {
     } else {
       document.body.classList.remove("dark");
     }
-  }, [themeMode])
+  }, [themeMode]);
 
   return (
     <ThemeProvider value={{themeMode, lightMode, darkMode}}>
