@@ -7,7 +7,7 @@ import HTML5 from "../assets/HTML5.svg"
 import Tailwind from "../assets/Tailwind CSS.svg"
 import Vercel from "../assets/Vercel.svg"
 import WordPress from "../assets/WordPress.svg"
-import ReactSvg from "../assets/ReactSVG.svg"
+import ReactSvg from "../assets/react.svg"
 import JavaScript from "../assets/JavaScript.svg"
 import Vite from "../assets/Vite.js.svg"
 import {
@@ -15,7 +15,6 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "../components/magicui/tooltip"
-import tailwindcss from "@tailwindcss/vite"
 
 
 
