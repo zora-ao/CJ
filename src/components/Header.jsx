@@ -31,8 +31,8 @@ const Header = () => {
     const {themeMode, lightMode, darkMode} = useTheme();
 
     return (
-        <section className='backdrop-blur-2xl py-3 md:px-14 px-8 fixed top-0 w-full shadow-sm z-50'>
-            <div className='flex justify-between items-center inter'>
+        <section className='backdrop-blur-2xl py-3 md:px-14 fixed top-0 w-full shadow-sm z-50'>
+            <div className='flex justify-between items-center inter px-8 md:my-0 my-2'>
                 <h1 className='itim text-xl font-semibold'>Carl Jasper Ramos</h1>
 
 
@@ -76,9 +76,9 @@ const Header = () => {
 
             
             <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out  ${showNav ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+            className={`overflow-hidden transition-all duration-500 ease-in-out  ${showNav ? "max-h-96 opacity-100 bg-black" : "max-h-0 opacity-0"}`}
             >
-                <ul className={`text-center flex flex-col gap-4 mt-4 py-4`}>
+                <ul className={`text-center flex flex-col gap-4 py-4`}>
                     {navigations.map((nav, index) => (
                         <li 
                         className='cursor-pointer mx-4 text-xl'
