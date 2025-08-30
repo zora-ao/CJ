@@ -7,7 +7,7 @@ import HTML5 from "../assets/HTML5.svg"
 import Tailwind from "../assets/Tailwind CSS.svg"
 import Vercel from "../assets/Vercel.svg"
 import WordPress from "../assets/WordPress.svg"
-import ReactSvg from "../assets/ReactSvg.svg"
+import ReactSvg from "../assets/ReactSVG.svg"
 import JavaScript from "../assets/JavaScript.svg"
 import Vite from "../assets/Vite.js.svg"
 import {
@@ -15,6 +15,7 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "../components/magicui/tooltip"
+import tailwindcss from "@tailwindcss/vite"
 
 
 
@@ -23,6 +24,7 @@ const Skills = () => {
     const techTools = [
         {name: "HTML", img: HTML5, color: "#FF6363"},
         {name: "CSS", img: CSS3, color: "#3674B5"},
+        {name: "Tailwind CSS", img: Tailwind, color: "#3674B5"},
         {name: "JavaScript", img: JavaScript, color: "#FFDE63"},
         {name: "React", img: ReactSvg, color: "#578FCA"},
         {name: "Vite", img: Vite, color: "#AE75DA"},
