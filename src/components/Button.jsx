@@ -9,7 +9,7 @@ const Button = ({
     const {themeMode} = useTheme();
 
     return (
-        <button className={`border px-4 py-3 rounded ${bgColor} ${textColor} ${themeMode === "light" ? "border-black" : "border-white"}`}>{value}</button>
+        <button className={`border px-3 py-2 rounded ${bgColor} ${textColor} ${themeMode === "light" ? "border-black" : "border-white font-semibold"}`}>{value}</button>
     )
 }
 

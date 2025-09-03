@@ -35,7 +35,7 @@ const Skills = () => {
     ]
 
     return (
-        <div className='md:h-screen pt-20 inter flex flex-col '>
+        <div id="skills" className='md:h-screen pt-20 inter flex flex-col '>
             <div className="text-center mb-10">
                 <h1 className='text-3xl  font-semibold inter'>Technologies that I used</h1>
                 <p>Learning and emproving skills everyday. </p>

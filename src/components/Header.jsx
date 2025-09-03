@@ -12,19 +12,19 @@ const Header = () => {
     const navigations = [
         {
             title: "Home",
-            path: "#"
+            path: "#home"
         },{
             title: "Skills",
-            path: "#"
+            path: "#skills"
         },{
             title: "About",
-            path: "#"
+            path: "#about"
         },{
             title: "Projects",
-            path: "#"
+            path: "#projects"
         },{
             title: "Contact",
-            path: "#"
+            path: "#contact"
         }
     ];
 
@@ -41,7 +41,9 @@ const Header = () => {
                         {navigations.map((nav, index) => (
                             <li 
                             className='cursor-pointer mx-4'
-                            key={index}>{nav.title}</li>
+                            key={index}>
+                                <a href={nav.path}>{nav.title}</a>
+                            </li>
                         ))}
                     </ul>
 

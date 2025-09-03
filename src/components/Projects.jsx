@@ -48,7 +48,7 @@ const Projects = () => {
     ]
 
     return (
-        <div className="py-10 inter px-4">
+        <div id="projects" className="py-10 inter px-4 scroll-my-10">
             <h1 className="text-4xl text-center font-bold">My Projects</h1>
 
             <ProjectCard projects={projects} />
