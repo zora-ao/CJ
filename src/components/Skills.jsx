@@ -36,10 +36,15 @@ const Skills = () => {
 
     return (
         <div id="skills" className='md:h-screen pt-20 inter flex flex-col '>
-            <div className="text-center mb-10">
-                <h1 className='text-3xl  font-semibold inter'>Technologies that I used</h1>
-                <p>Learning and emproving skills everyday. </p>
+            <div className="mb-20">
+            <div className="flex items-center gap-4 mb-4">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-neutral-800"></div>
+                <span className="text-neutral-500 tracking-wider uppercase text-sm">Skills</span>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-neutral-800"></div>
             </div>
+                <p className="text-center">Learning and emproving skills everyday. </p>
+            </div>
+            
 
             <div className="grid md:grid-cols-5 grid-cols-3 gap-x-4 md:gap-x-10 gap-y-12 border-black md:w-1/2 mx-auto">
                 {techTools.map((tool, index) => (

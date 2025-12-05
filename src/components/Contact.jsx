@@ -6,6 +6,8 @@ const Contact = () => {
             <div>
                 <h1 className='text-xl my-2'>Get In Touch</h1>
 
+                
+                
             </div>
         </div>
     )

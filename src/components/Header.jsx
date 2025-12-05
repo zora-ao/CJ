@@ -14,11 +14,11 @@ const Header = () => {
             title: "Home",
             path: "#home"
         },{
+            title: "Certificates",
+            path: "#certi"
+        },{
             title: "Skills",
             path: "#skills"
-        },{
-            title: "About",
-            path: "#about"
         },{
             title: "Projects",
             path: "#projects"

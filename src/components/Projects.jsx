@@ -48,8 +48,15 @@ const Projects = () => {
     ]
 
     return (
-        <div id="projects" className="py-10 inter px-4 scroll-my-10">
-            <h1 className="text-4xl text-center font-bold">My Projects</h1>
+        <div id="projects" className="py-10 inter px-4 scroll-my-10 bg-neutral-900/50">
+            <div className="mb-20">
+            <div className="flex items-center gap-4 mb-4">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-neutral-800"></div>
+                <span className="text-neutral-500 tracking-wider uppercase text-sm">Projects</span>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-neutral-800"></div>
+            </div>
+            <h2 className="text-center text-neutral-50">The projects that I created</h2>
+            </div>
 
             <ProjectCard projects={projects} />
         </div>
