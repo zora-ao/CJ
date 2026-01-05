@@ -1,60 +1,82 @@
-import { FiGithub } from "react-icons/fi";
-import { FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
-import profile from '../assets/profile_pic.jpg';
+import profile from "../assets/profile_pic.jpg";
 import { useTheme } from "../contexts/themeContext";
 import Button from "./Button";
 import { Highlighter } from "../components/magicui/highlighter";
 
 const Hero = () => {
+  const { themeMode } = useTheme();
 
-    const {themeMode} = useTheme();
+  return (
+    <section
+      id="home"
+      className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center mt-20 md:mt-0 px-4"
+    >
+      {/* Text Section */}
+      <div className="md:w-1/2 inter">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          Hi, I'm Carl
+        </h1>
 
-    return (
-        <section id="home" className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center mt-20 md:mt-0">
+        {/* Title with Magic UI (desktop) + CSS fallback (mobile) */}
+        <div className="my-4">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            {/* Desktop: Magic UI Highlighter */}
+            <span className="md:inline-block">
+              <Highlighter action="underline" color="yellow">
+                Website Developer
+              </Highlighter>
+            </span>
+
             
-            <div className="md:w-1/2 inter">
-                <h1 className="text-6xl">Hi, I'm Carl</h1>
-                <div className="my-4">
-                    <h2 className="text-3xl font-semibold inline-block">
-                        <Highlighter action="underline" color="yellow">
-                            Website Developer
-                        </Highlighter>
-                    </h2>
-                </div>
+          </h2>
+        </div>
 
-                <p>
-                    I create beautiful, responsive web applications using modern technologies. 
-                    Passionate about clean code, user experience, and bringing ideas to life through development.
-                </p>
+        <p className="max-w-xl text-base md:text-lg">
+          I create beautiful, responsive web applications using modern
+          technologies. Passionate about clean code, user experience,
+          and bringing ideas to life through development.
+        </p>
 
-                <div className="flex items-center gap-x-2 my-8">
-                    <Button value={"View My Work"} bgColor={"bg-black"} textColor={"text-white"} />
-                    <Button value={"Get In Touch"} bgColor={"bg-white"} textColor={"text-black"} />
-                </div>
+        {/* Buttons */}
+        <div className="flex flex-wrap items-center gap-4 my-8">
+          <Button
+            value="View My Work"
+            bgColor="bg-black"
+            textColor="text-white"
+          />
+          <Button
+            value="Get In Touch"
+            bgColor="bg-white"
+            textColor="text-black"
+          />
+        </div>
 
-                <ul className="flex items-center gap-x-8 text-xl">
-                    <li>
-                        <FiGithub />
-                    </li>
-                    <li>
-                        <FiLinkedin />
-                    </li>
-                    <li>
-                        <CgMail />
-                    </li>
-                </ul>
-            </div>
+        {/* Social Icons */}
+        <ul className="flex items-center gap-x-8 text-2xl pb-4">
+          <li className="cursor-pointer hover:scale-110 transition">
+            <FiGithub />
+          </li>
+          <li className="cursor-pointer hover:scale-110 transition">
+            <FiLinkedin />
+          </li>
+          <li className="cursor-pointer hover:scale-110 transition">
+            <CgMail />
+          </li>
+        </ul>
+      </div>
 
-            <div>
-                <img 
-                className='w-[250px] h-[250px] my-10 rounded-full shadow-2xl'
-                src={profile} 
-                alt="Profile picture" />
-            </div>
-        
-        </section>
-    )
-}
+      {/* Image Section */}
+      <div>
+        <img
+          className="w-[220px] h-[220px] md:w-[250px] md:h-[250px] my-10 rounded-full shadow-2xl"
+          src={profile}
+          alt="Profile picture"
+        />
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;
