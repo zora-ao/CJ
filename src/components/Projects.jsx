@@ -48,7 +48,7 @@ const Projects = () => {
     ]
 
     return (
-        <div id="projects" className="py-10 inter px-4 scroll-my-10 bg-neutral-900/50">
+        <div id="projects" className="py-10 inter px-4 scroll-my-10 bg-white dark:bg-neutral-950 transition-colors duration-300">
             <div className="mb-20">
             <div className="flex items-center gap-4 mb-4">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-neutral-800"></div>

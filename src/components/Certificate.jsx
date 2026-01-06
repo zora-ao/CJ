@@ -39,20 +39,20 @@ export function Certificate() {
   return (
     <section
       id="certi"
-      className="px-3 pb-16 pt-20 bg-neutral-950"
+      className="px-3 pb-16 pt-20 bg-white dark:bg-neutral-950 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4">
-            <div className="h-px flex-1 bg-neutral-800" />
-            <span className="text-neutral-500 tracking-wider uppercase text-sm">
+            <div className="h-px flex-1 bg-neutral-300 dark:bg-neutral-800" />
+            <span className="tracking-wider uppercase text-sm text-neutral-600 dark:text-neutral-500">
               Certificates
             </span>
-            <div className="h-px flex-1 bg-neutral-800" />
+            <div className="h-px flex-1 bg-neutral-300 dark:bg-neutral-800" />
           </div>
 
-          <h2 className="text-center text-neutral-100 text-2xl md:text-3xl font-semibold">
+          <h2 className="text-center text-2xl md:text-3xl font-semibold text-neutral-900 dark:text-neutral-100">
             Certifications & Achievements
           </h2>
         </div>
@@ -62,26 +62,28 @@ export function Certificate() {
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className="group relative p-4 rounded-xl bg-neutral-900 border border-neutral-800 transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-900/80 flex flex-col"
+              className="group relative p-4 rounded-xl border flex flex-col transition-all duration-300
+                bg-gray-100 border-gray-300 hover:bg-gray-200 hover:border-gray-400
+                dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-900/80 dark:hover:border-neutral-700"
             >
               {/* Top Content */}
               <div className="flex-1">
                 {/* Icon */}
-                <div className="mb-4 inline-flex p-3 rounded-lg border border-neutral-700">
-                  <Award className="w-5 h-5 text-neutral-300" />
+                <div className="mb-4 inline-flex p-3 rounded-lg border border-gray-300 dark:border-neutral-700">
+                  <Award className="w-5 h-5 text-gray-600 dark:text-neutral-300" />
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-2 text-neutral-100 text-sm md:text-base font-medium">
+                <h3 className="mb-2 text-sm md:text-base font-medium text-neutral-900 dark:text-neutral-100">
                   {cert.title}
                 </h3>
 
-                <p className="text-neutral-400 text-sm mb-3">
+                <p className="text-sm mb-3 text-gray-700 dark:text-neutral-400">
                   {cert.issuer}
                 </p>
 
                 {/* Date */}
-                <div className="flex items-center gap-2 text-xs text-neutral-500">
+                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-500">
                   <Calendar className="w-4 h-4" />
                   <span>{cert.date}</span>
                 </div>
@@ -92,7 +94,7 @@ export function Certificate() {
                 href={cert.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto inline-flex items-center gap-1 pt-4 text-xs text-neutral-300 hover:text-neutral-100 transition-colors"
+                className="mt-auto inline-flex items-center gap-1 pt-4 text-xs text-gray-700 hover:text-gray-900 dark:text-neutral-300 dark:hover:text-neutral-100 transition-colors"
               >
                 Verify
                 <ExternalLink className="w-3.5 h-3.5" />

@@ -14,7 +14,7 @@ const ImageSlider = ({ images }) => {
     }
 
     return (
-        <div className="relative w-full h-[250px] overflow-hidden rounded">
+        <div className="relative w-full h-[250px] overflow-hidden rounded-t">
         <AnimatePresence>
             <motion.img
             key={index}

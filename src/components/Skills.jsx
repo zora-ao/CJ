@@ -35,7 +35,7 @@ const Skills = () => {
     ]
 
     return (
-        <div id="skills" className='md:h-screen pt-20 inter flex flex-col '>
+        <div id="skills" className='md:h-screen pt-20 inter flex flex-col bg-white dark:bg-neutral-950 transition-colors duration-300'>
             <div className="mb-20">
             <div className="flex items-center gap-4 mb-4">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-neutral-800"></div>

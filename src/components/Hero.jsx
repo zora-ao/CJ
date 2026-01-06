@@ -6,12 +6,11 @@ import Button from "./Button";
 import { Highlighter } from "../components/magicui/highlighter";
 
 const Hero = () => {
-  const { themeMode } = useTheme();
 
   return (
     <section
       id="home"
-      className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center mt-20 md:mt-0 px-4"
+      className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center mt-20 md:mt-0 px-4 bg-white dark:bg-neutral-950 transition-colors duration-300"
     >
       {/* Text Section */}
       <div className="md:w-1/2 inter">
@@ -56,7 +55,9 @@ const Hero = () => {
         {/* Social Icons */}
         <ul className="flex items-center gap-x-8 text-2xl pb-4">
           <li className="cursor-pointer hover:scale-110 transition">
-            <FiGithub />
+            <a href="https://github.com/zora-ao">
+              <FiGithub />
+            </a>
           </li>
           <li className="cursor-pointer hover:scale-110 transition">
             <FiLinkedin />
