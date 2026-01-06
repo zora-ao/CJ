@@ -1,8 +1,7 @@
-"use client";;
-import { motion } from "motion/react";
 import { useEffect, useId, useRef, useState } from "react";
+import { motion } from "motion/react"
 
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils"
 
 export function AnimatedGridPattern({
   width = 40,
@@ -14,13 +13,12 @@ export function AnimatedGridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
-  repeatDelay = 0.5,
   ...props
 }) {
-  const id = useId();
-  const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const id = useId()
+  const containerRef = useRef(null)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const [squares, setSquares] = useState(() => generateSquares(numSquares))
 
   function getPos() {
     return [
@@ -46,37 +44,37 @@ export function AnimatedGridPattern({
               ...sq,
               pos: getPos(),
             }
-          : sq));
-  };
+          : sq))
+  }
 
   // Update squares to animate in
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
-      setSquares(generateSquares(numSquares));
+      setSquares(generateSquares(numSquares))
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions, numSquares, generateSquares])
 
   // Resize observer to update container dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setDimensions({
           width: entry.contentRect.width,
           height: entry.contentRect.height,
-        });
+        })
       }
-    });
+    })
 
     if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+      resizeObserver.observe(containerRef.current)
     }
 
     return () => {
       if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+        resizeObserver.unobserve(containerRef.current)
       }
     };
-  }, [containerRef]);
+  }, [containerRef])
 
   return (
     <svg

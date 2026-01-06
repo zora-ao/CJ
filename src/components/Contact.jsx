@@ -32,7 +32,7 @@ const Contact = () => {
             {/* CTA Buttons */}
             <div className="flex gap-4 mt-4 justify-center md:justify-start">
               <a
-                href="mailto:your@email.com"
+                href="mailto:carljasperramos5@gmail.com"
                 className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
               >
                 Email Me
@@ -77,7 +77,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="mailto:your@email.com"
+              href="mailto:carljasperramos5@gmail.com"
               className={`transition ${
                 themeMode === "dark" ? "text-neutral-400 hover:text-neutral-100" : "text-gray-500 hover:text-gray-900"
               }`}

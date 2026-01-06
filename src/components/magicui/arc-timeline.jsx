@@ -1,5 +1,5 @@
 "use client";;
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import { useState } from "react";
 
 export function ArcTimeline(props) {

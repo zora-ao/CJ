@@ -60,10 +60,14 @@ const Hero = () => {
             </a>
           </li>
           <li className="cursor-pointer hover:scale-110 transition">
-            <FiLinkedin />
+            <a href="mailto:carljasperramos5@gmail.com">
+              <FiLinkedin />
+            </a>
           </li>
           <li className="cursor-pointer hover:scale-110 transition">
-            <CgMail />
+            <a href="mailto:carljasperramos5@gmail.com">
+              <CgMail />
+            </a>
           </li>
         </ul>
       </div>
