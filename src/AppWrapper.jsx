@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
-
-import HomePage from "./pages/HomePage";
-import CertiPage from "./pages/CertiPage";
-
-import { ThemeProvider } from "./contexts/themeContext.js";
+import React, { useState, useEffect } from "react";
+import { ThemeProvider } from "./contexts/themeContext";
 import { InteractiveGridPattern } from "./components/ui/interactive-grid-pattern";
 
-const App = ({ currentRoute }) => {
+const AppWrapper = ({ children }) => {
   const [themeMode, setThemeMode] = useState("dark");
 
   const lightMode = () => setThemeMode("light");
@@ -20,13 +16,10 @@ const App = ({ currentRoute }) => {
     }
   }, [themeMode]);
 
-  // Determine which page to render based on currentRoute
-  // (But with createBrowserRouter, routing will be handled in index.jsx)
-
   return (
     <ThemeProvider value={{ themeMode, lightMode, darkMode }}>
       <div className="relative min-h-screen bg-background text-foreground">
-        {/* Background grid */}
+        {/* Background Grid */}
         <div className="pointer-events-none fixed inset-0 flex items-center justify-center opacity-20 dark:opacity-15">
           <InteractiveGridPattern
             width={60}
@@ -34,10 +27,10 @@ const App = ({ currentRoute }) => {
             className="w-full h-full max-w-none"
           />
         </div>
-        {/* The pages will render via RouterProvider */}
+        {children}
       </div>
     </ThemeProvider>
   );
 };
 
-export default App;
+export default AppWrapper;

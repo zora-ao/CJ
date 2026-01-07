@@ -18,6 +18,9 @@ import laptopList from "../03_laptop-reco/laptopList.png"
 import laptopSpecs from "../03_laptop-reco/laptopSpecs.png"
 import laptopDetails from "../03_laptop-reco/laptopDetails.png"
 
+import e_com_wp from "../04_wp/ecom_wp.webp"
+import landing_wp from "../04_wp/landing_wp.webp"
+
 import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
@@ -44,7 +47,17 @@ const Projects = () => {
             tech: ["React", "Vite", "Tailwind css"],
             code_link: "https://github.com/zora-ao/laptop_recommendation",
             live_link: "https://laptop-recommendation-one.vercel.app/"
-        },
+        },{
+            title: "E-Commerce Website",
+            slides: [e_com_wp],
+            details: "A responsive portfolio website showcasing modern design principles and smooth animations. Built with performance and accessibility in mind.",
+            tech: ["Wordpress", "Elementor"]
+        },{
+            title: "Landing Page Website",
+            slides: [landing_wp],
+            details: "A responsive portfolio website showcasing modern design principles and smooth animations. Built with performance and accessibility in mind.",
+            tech: ["Wordpress", "Elementor"]
+        }
     ]
 
     return (

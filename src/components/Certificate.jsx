@@ -1,5 +1,5 @@
 import { Award, Calendar, ExternalLink } from "lucide-react";
-
+import { Link } from "react-router-dom";
 
 const certificates = [
   {
@@ -40,7 +40,7 @@ export function Certificate() {
   return (
     <section
       id="certi"
-      className="px-3 pb-16 pt-20 bg-white dark:bg-neutral-950 transition-colors duration-300"
+      className="px-3 pb-20 pt-20 bg-white dark:bg-neutral-950 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
@@ -58,23 +58,20 @@ export function Certificate() {
           </h2>
         </div>
 
-        {/* Certificates Grid */}
+        {/* Certificates Grid (ONLY 4) */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
-          {certificates.map((cert) => (
+          {certificates.slice(0, 4).map((cert) => (
             <div
               key={cert.id}
               className="group relative p-4 rounded-xl border flex flex-col transition-all duration-300
                 bg-gray-100 border-gray-300 hover:bg-gray-200 hover:border-gray-400
                 dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-900/80 dark:hover:border-neutral-700"
             >
-              {/* Top Content */}
               <div className="flex-1">
-                {/* Icon */}
                 <div className="mb-4 inline-flex p-3 rounded-lg border border-gray-300 dark:border-neutral-700">
                   <Award className="w-5 h-5 text-gray-600 dark:text-neutral-300" />
                 </div>
 
-                {/* Content */}
                 <h3 className="mb-2 text-sm md:text-base font-medium text-neutral-900 dark:text-neutral-100">
                   {cert.title}
                 </h3>
@@ -83,14 +80,12 @@ export function Certificate() {
                   {cert.issuer}
                 </p>
 
-                {/* Date */}
                 <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-500">
                   <Calendar className="w-4 h-4" />
                   <span>{cert.date}</span>
                 </div>
               </div>
 
-              {/* Verify Link – pinned to bottom */}
               <a
                 href={cert.verifyUrl}
                 target="_blank"
@@ -102,6 +97,19 @@ export function Certificate() {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* View More Button */}
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/certificates"
+            className="px-6 py-2 text-sm rounded-lg border
+              border-neutral-300 text-neutral-700 hover:bg-neutral-100
+              dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800
+              transition-colors"
+          >
+            View More
+          </Link>
         </div>
       </div>
     </section>
