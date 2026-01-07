@@ -28,22 +28,22 @@ const Projects = () => {
             slides: [cakeHero, cakeBanner, cakeProducts, cakeAbout, cakeContact, cakeCart],
             details: "A full-featured e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
             tech: ["HTML", "CSS", "JavaScript"],
-            code_link: "/",
+            code_link: "https://github.com/zora-ao/e-commerce",
             live_link: "https://zora-ao.github.io/e-commerce/index.html#hero"
         },{
             title: "Recipe Site Website",
             slides: [recipeSearch, recipeDishes, recipeFavs, dish, dishProc],
             details: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
             tech: ["React", "Vite", "Tailwind css", "Appwrite"],
-            code_link: "/",
-            live_link: "/https://recipes-rust-three.vercel.app/"
+            code_link: "https://github.com/zora-ao/recipes",
+            live_link: "https://recipes-rust-three.vercel.app/"
         },{
             title: "Laptop Recommendations",
             slides: [laptopHero, laptopTips, laptopList, laptopSpecs, laptopDetails],
             details: "A responsive portfolio website showcasing modern design principles and smooth animations. Built with performance and accessibility in mind.",
             tech: ["React", "Vite", "Tailwind css"],
-            code_link: "/",
-            live_link: "/https://zora-ao.github.io/laptop_recommendation"
+            code_link: "https://github.com/zora-ao/laptop_recommendation",
+            live_link: "https://laptop-recommendation-one.vercel.app/"
         },
     ]
 

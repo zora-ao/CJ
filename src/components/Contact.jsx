@@ -10,7 +10,7 @@ const Contact = () => {
       id="contact"
       className={`transition-colors duration-300 border-t scroll-mt-40 py-2 ${
         themeMode === "dark"
-          ? "bg-neutral-950 border-neutral-800 text-neutral-100"
+          ? "backdrop-blur-2xl bg-neutral-950 border-neutral-800 text-neutral-100"
           : "bg-white border-gray-300 text-neutral-900"
       }`}
     >
@@ -38,8 +38,8 @@ const Contact = () => {
                 Email Me
               </a>
               <a
-                href="https://linkedin.com"
-                target="_blank"
+                href="https://www.linkedin.com/in/carl-jasper-ramos-4262613a5/"
+
                 rel="noopener noreferrer"
                 className={`px-4 py-2 rounded-lg border transition ${
                   themeMode === "dark"
@@ -66,8 +66,8 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://linkedin.com"
-              target="_blank"
+              href="https://www.linkedin.com/in/carl-jasper-ramos-4262613a5/"
+             
               rel="noopener noreferrer"
               className={`transition ${
                 themeMode === "dark" ? "text-neutral-400 hover:text-neutral-100" : "text-gray-500 hover:text-gray-900"

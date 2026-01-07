@@ -60,7 +60,7 @@ const Hero = () => {
             </a>
           </li>
           <li className="cursor-pointer hover:scale-110 transition">
-            <a href="mailto:carljasperramos5@gmail.com">
+            <a href="https://www.linkedin.com/in/carl-jasper-ramos-4262613a5/">
               <FiLinkedin />
             </a>
           </li>

@@ -13,8 +13,8 @@ const Header = () => {
     const navigations = [
         { title: "Home", path: "#home" },
         { title: "Certificates", path: "#certi" },
-        { title: "Skills", path: "#skills" },
         { title: "Projects", path: "#projects" },
+        { title: "Skills", path: "#skills" },
         { title: "Contact", path: "#contact" },
     ];
 
