@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <footer
       id="contact"
-      className={`transition-colors duration-300 border-t scroll-mt-40 py-2 ${
+      className={`transition-colors duration-300 border-t scroll-mt-40 py-2 mt-6 md:mt-0 ${
         themeMode === "dark"
           ? "backdrop-blur-2xl bg-neutral-950 border-neutral-800 text-neutral-100"
           : "bg-white border-gray-300 text-neutral-900"

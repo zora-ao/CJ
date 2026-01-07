@@ -55,7 +55,7 @@ const Skills = () => {
               <TooltipTrigger>
                 <div
                   style={{ boxShadow: `0px 0px 15px ${tool.color}` }}
-                  className="bg-white/20 dark:bg-neutral-800/30 backdrop-blur-sm shadow-2xl rounded mx-auto w-[80px] h-[80px] border border-black px-6 py-6 
+                  className="bg-white/20 dark:bg-neutral-800/50 shadow-2xl rounded mx-auto w-[80px] h-[80px] border  px-6 py-6 
                              hover:bg-gray-300/80 dark:hover:bg-gray-700/50 transition-colors duration-300 flex items-center justify-center"
                 >
                   <img

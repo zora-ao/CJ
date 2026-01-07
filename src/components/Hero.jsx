@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center mt-20 md:mt-0 px-4 bg-white dark:bg-neutral-950 transition-colors duration-300"
+      className="flex flex-wrap md:h-screen justify-center md:justify-evenly items-center scroll-mt-40 mt-32 md:mt-0 px-4 bg-white dark:bg-neutral-950 transition-colors duration-300"
     >
       {/* Text Section */}
       <div className="md:w-1/2 inter">
