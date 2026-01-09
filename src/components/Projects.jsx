@@ -18,7 +18,10 @@ import laptopList from "../03_laptop-reco/laptopList.png"
 import laptopSpecs from "../03_laptop-reco/laptopSpecs.png"
 import laptopDetails from "../03_laptop-reco/laptopDetails.png"
 
-import e_com_wp from "../04_wp/ecom_wp.webp"
+import ecom_cake from "../04_wp/ecom_cake.png"
+import laptop_reco from "../04_wp/laptop_reco.png"
+import recipeSite from "../04_wp/recipeSite.png"
+import e_com_wp from "../04_wp/ecom_wp.png"
 import landing_wp from "../04_wp/landing_wp.webp"
 
 import ProjectCard from "./ProjectCard"
@@ -28,21 +31,21 @@ const Projects = () => {
     const projects = [
         {
             title: "Cake Shop",
-            slides: [cakeHero, cakeBanner, cakeProducts, cakeAbout, cakeContact, cakeCart],
+            slides: [ecom_cake],
             details: "A full-featured e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
             tech: ["HTML", "CSS", "JavaScript"],
             code_link: "https://github.com/zora-ao/e-commerce",
             live_link: "https://zora-ao.github.io/e-commerce/index.html#hero"
         },{
             title: "Recipe Site Website",
-            slides: [recipeSearch, recipeDishes, recipeFavs, dish, dishProc],
+            slides: [recipeSite],
             details: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
             tech: ["React", "Vite", "Tailwind css", "Appwrite"],
             code_link: "https://github.com/zora-ao/recipes",
             live_link: "https://recipes-rust-three.vercel.app/"
         },{
             title: "Laptop Recommendations",
-            slides: [laptopHero, laptopTips, laptopList, laptopSpecs, laptopDetails],
+            slides: [laptop_reco],
             details: "A responsive portfolio website showcasing modern design principles and smooth animations. Built with performance and accessibility in mind.",
             tech: ["React", "Vite", "Tailwind css"],
             code_link: "https://github.com/zora-ao/laptop_recommendation",

@@ -1,6 +1,5 @@
 import { FiGithub } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import ImageSlider from "./ImageSlider";
 import { useTheme } from "../contexts/themeContext";
 
 const ProjectCard = ({ projects }) => {
@@ -16,7 +15,9 @@ const ProjectCard = ({ projects }) => {
             ${themeMode === "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}
         >
           {/* Image Slider */}
-          <ImageSlider images={project.slides} />
+          <div className="relative w-full h-[250px] overflow-hidden rounded-t">
+            <img src={project.slides} alt="Image" className="w-full h-full object-cover absolute top-0 left-0" />
+          </div>
 
           {/* Project Info */}
           <div className="px-4 my-4">

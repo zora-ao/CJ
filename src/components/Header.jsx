@@ -63,7 +63,7 @@ const Header = () => {
     };
 
     return (
-        <section className="backdrop-blur-2xl bg-white/10 dark:bg-black/30 py-3 md:px-14 fixed top-0 w-full shadow-sm z-50">
+        <section className="backdrop-blur-2xl bg-white/10 dark:bg-black/30 py-3 md:px-14 fixed top-0 w-full shadow-sm z-50 transition-colors duration-300">
         <div className={`flex justify-between items-center inter px-8 md:my-0 my-2 relative ${textColor}`}>
             <h1 className='itim text-xl font-semibold'>Carl Jasper Ramos</h1>
 
